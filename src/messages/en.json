@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Ahiyade | B2B Marketplace for Benin",
+    "description": "Buy, sell, and grow business relationships with verified suppliers across Benin's 12 departments."
+  },
+  "nav": {
+    "catalog": "Catalog",
+    "pricing": "Pricing",
+    "supplierDashboard": "Supplier space",
+    "buyerDashboard": "Buyer space",
+    "admin": "Admin",
+    "messages": "Messages",
+    "login": "Login",
+    "register": "Register"
+  },
+  "home": {
+    "taglineFr": "La place de marche B2B dediee aux entreprises du Benin.",
+    "taglineEn": "The B2B marketplace dedicated to businesses across Benin.",
+    "supplierCta": "Become a supplier",
+    "buyerCta": "Buy for my business",
+    "categories": "Featured categories",
+    "suppliers": "Featured suppliers",
+    "how": "How it works",
+    "cta": "Grow your local business network"
+  },
+  "common": {
+    "search": "Search",
+    "category": "Category",
+    "department": "Department",
+    "price": "Price",
+    "quote": "Request a quote",
+    "contact": "Contact",
+    "save": "Save",
+    "all": "All",
+    "loading": "Loading...",
+    "products": "Products"
+  }
+}

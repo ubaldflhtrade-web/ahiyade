@@ -1,0 +1,13 @@
+.env
+.env.local
+.env.production
+.next
+node_modules
+.pnpm-store
+.pnpm-debug.log
+dev-server.log
+dev-server.err.log
+coverage
+dist
+*.log
+prisma/dev.db
