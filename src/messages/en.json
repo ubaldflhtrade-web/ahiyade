@@ -34,5 +34,15 @@
     "all": "All",
     "loading": "Loading...",
     "products": "Products"
+  },
+  "supplierDashboard": {
+    "publish": "Publish",
+    "publishing": "Publishing...",
+    "productAdded": "Product added successfully.",
+    "productCreateError": "Unable to add the product.",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "deleteConfirm": "Do you really want to delete this product?",
+    "productDeleteError": "Unable to delete the product."
   }
 }

@@ -34,5 +34,15 @@
     "all": "Tous",
     "loading": "Chargement...",
     "products": "Produits"
+  },
+  "supplierDashboard": {
+    "publish": "Publier",
+    "publishing": "Publication...",
+    "productAdded": "Produit ajoute avec succes.",
+    "productCreateError": "Impossible d'ajouter le produit.",
+    "delete": "Supprimer",
+    "deleting": "Suppression...",
+    "deleteConfirm": "Voulez-vous vraiment supprimer ce produit ?",
+    "productDeleteError": "Impossible de supprimer le produit."
   }
 }

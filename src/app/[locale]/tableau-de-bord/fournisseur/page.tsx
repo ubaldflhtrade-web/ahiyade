@@ -2,11 +2,11 @@ import { Crown, Eye, MessageSquare, Package, Send } from "lucide-react";
 import { DashboardShell } from "@/components/dashboard-shell";
 import { EmptyState } from "@/components/empty-state";
 import { ProductForm } from "@/components/forms/product-form";
+import { ProductsManagementList } from "@/components/products-management-list";
 import { StatCard } from "@/components/stat-card";
 import type { Locale } from "@/i18n/config";
 import { getCategories, getSupplierDashboard } from "@/lib/queries";
 import { requireRole } from "@/lib/session";
-import { formatCurrency } from "@/lib/utils";
 
 export default async function SupplierDashboardPage({ params }: { params: { locale: Locale } }) {
   const user = await requireRole(["SUPPLIER"], params.locale);
@@ -40,19 +40,20 @@ export default async function SupplierDashboardPage({ params }: { params: { loca
               {user.plan === "FREE" ? `${products.length}/10` : "Illimite"}
             </span>
           </div>
-          <div className="mt-4 grid gap-3">
+          <div className="mt-4">
             {products.length ? (
-              products.map((product: any) => (
-                <article key={product.id} className="rounded-md border border-ahiyade-sand/70 p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="font-black text-ahiyade-cocoa">{product.name}</p>
-                      <p className="text-sm text-ahiyade-cocoa/70">{product.category.nameFr}</p>
-                    </div>
-                    <p className="font-black text-ahiyade-coral">{formatCurrency(Number(product.price))}</p>
-                  </div>
-                </article>
-              ))
+              <ProductsManagementList
+                locale={params.locale}
+                products={products.map((product: any) => ({
+                  id: product.id,
+                  name: product.name,
+                  price: Number(product.price),
+                  category: {
+                    nameFr: product.category.nameFr,
+                    nameEn: product.category.nameEn
+                  }
+                }))}
+              />
             ) : (
               <EmptyState title="Aucun produit" description="Ajoutez votre premier produit pour recevoir des demandes de devis." />
             )}

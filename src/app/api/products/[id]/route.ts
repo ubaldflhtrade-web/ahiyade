@@ -63,6 +63,7 @@ export async function DELETE(_request: Request, { params }: Params) {
     return NextResponse.json({ error: "Acces refuse" }, { status: 403 });
   }
 
+  // La suppression est logique afin de preserver l'historique commercial associe au produit.
   await db.product.update({
     where: { id: params.id },
     data: { isActive: false }

@@ -310,7 +310,8 @@ export async function getSupplierDashboard(userId: string) {
       where: { id: userId },
       include: {
         supplierProfile: true,
-        products: { include: { category: true }, orderBy: { createdAt: "desc" } },
+        // Les produits supprimes logiquement ne doivent plus compter ni apparaitre au tableau de bord.
+        products: { where: { isActive: true }, include: { category: true }, orderBy: { createdAt: "desc" } },
         receivedQuotes: { include: { product: true, buyer: true }, orderBy: { createdAt: "desc" } },
         receivedMessages: { orderBy: { createdAt: "desc" }, take: 5 },
         subscriptions: { orderBy: { createdAt: "desc" }, take: 1 }
